@@ -10,23 +10,28 @@
     </nav>
   </header>
   <main>
-    <HelloWorld />
+    <!-- <HomePage /> -->
+    <!-- <RobotBuilder /> -->
+    <SearchComponent />
   </main>
 </template>
 
 <script>
-import HelloWorld from './components/HomePage.vue';
+// import HomePage from './home/HomePage.vue';
+// import RobotBuilder from './build/RobotBuilder.vue';
+import SearchComponent from './search/SearchComponent.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld,
+    // HomePage,
+    // RobotBuilder,
+    SearchComponent,
   },
 };
 </script>
 
 <style>
-
 body {
   background: linear-gradient(to bottom, #555, #999);
   background-attachment: fixed;
@@ -34,7 +39,9 @@ body {
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
 }
+</style>
 
+<style scoped>
 main {
   margin: 0 auto;
   padding: 30px;

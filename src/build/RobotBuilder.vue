@@ -22,10 +22,6 @@
       <button class="add-to-cart" @click="addToCart()">Add to Cart</button>
     </div>
     <div class="top-row">
-        <!-- <div class="robot-name">
-          {{selectedRobot.head.title}}
-          <span class="sale" v-if="selectedRobot.head.onSale">Sale!</span>
-        </div> -->
       <PartSelector
         :parts="availableParts.heads"
         position="top"
@@ -78,11 +74,23 @@ import CollapsabileSection from '../shared/CollapsabileSection.vue';
 
 export default {
   name: 'RobotBuilder',
+  beforeRouteLeave(to, from, next) {
+    if (this.addedToCart) {
+      next(true);
+    } else {
+      /* eslint no-alert: 0 */
+      /* eslint no-restricted-globals: 0 */
+      const response = confirm('You have not added a robot to your cart, are you sure you want to leave?');
+
+      next(response);
+    }
+  },
   components: { PartSelector, CollapsabileSection },
   data() {
     return {
       availableParts,
       cart: [],
+      addedToCart: false,
       selectedRobot: {
         head: {},
         leftArm: {},
@@ -115,6 +123,7 @@ export default {
       + robot.base.cost;
 
       this.cart.push({ ...robot, cost });
+      this.addedToCart = true;
     },
   },
 };

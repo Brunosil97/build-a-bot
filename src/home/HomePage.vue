@@ -5,14 +5,14 @@
         aria-hidden="true" />
     </div>
     <div class="get-started">
-      <a href="">Get Started</a> building your first robot!
+      <router-link to="/build">Get Started</router-link> building your first robot!
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'HomePage',
   props: {
     msg: String,
   },

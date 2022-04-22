@@ -1,17 +1,17 @@
 <template>
   <div :class="[position, 'part']">
-    <img alt="" :src="selectedPart.src" @click="showPartInfo= !showPartInfo"
-        @keypress="show" title="arm" />
+    <router-link :to="{
+            name: 'Parts',
+            params: {
+            id: selectedPart.id,
+            partType: selectedPart.type,
+            }
+        }">
+        <img alt="" :src="selectedPart.src" @keypress="show" title="arm" />
+    </router-link>
     <button @click="selectPreviousPart()" class="prev-selector"></button>
     <button @click="selectNextPart()" class="next-selector"></button>
     <span class="sale" v-show="selectedPart.onSale">Sale!</span>
-    <teleport to="#partInfo" v-if="showPartInfo">
-        <div>
-            <div>{{selectedPart.cost}} {{selectedPart.title}} {{selectedPart.type}}</div>
-            <div>{{selectedPart.description}}</div>
-            <hr/>
-        </div>
-    </teleport>
   </div>
 </template>
 
@@ -43,7 +43,7 @@ export default {
     },
   },
   data() {
-    return { selectedPartIndex: 0, showPartInfo: false };
+    return { selectedPartIndex: 0 };
   },
   computed: {
     selectedPart() {
@@ -71,6 +71,15 @@ export default {
         this.selectedPartIndex,
         this.parts.length,
       );
+    },
+    showPartInfo() {
+      this.$router.push({
+        name: 'Parts',
+        params: {
+          id: this.selectedPart.id,
+          partType: this.selectedPart.type,
+        },
+      });
     },
 
   },
@@ -104,6 +113,7 @@ export default {
 }
 .part img {
   width:165px;
+  cursor: pointer;
 }
 .top {
   border-bottom: none;

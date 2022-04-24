@@ -11,6 +11,7 @@ import RobotBases from '../parts/RobotBases.vue';
 import StandardSidebar from '../sidebar/SidebarStandard.vue';
 import SidebarBuild from '../sidebar/SidebarBuild.vue';
 import SearchComponent from '../search/SearchComponent.vue';
+import ShoppingCart from '../cart/ShoppingCart.vue';
 
 export default createRouter({
   history: createWebHashHistory(),
@@ -67,5 +68,9 @@ export default createRouter({
       const isValidId = Number.isInteger(Number(to.params.id));
       next(isValidId);
     },
+  }, {
+    path: '/cart',
+    name: 'Cart',
+    component: ShoppingCart,
   }],
 });

@@ -10,6 +10,7 @@ const parts = {
       src: images('./head-big-eye.png'),
       type: 'heads',
       cost: 1225.5,
+      onSale: false,
     },
     {
       id: 2,
@@ -28,6 +29,7 @@ const parts = {
       src: images('./head-shredder.png'),
       type: 'heads',
       cost: 1275.5,
+      onSale: false,
     },
     {
       id: 4,
@@ -37,6 +39,7 @@ const parts = {
       src: images('./head-single-eye.png'),
       type: 'heads',
       cost: 750.0,
+      onSale: false,
     },
     {
       id: 5,
@@ -46,6 +49,7 @@ const parts = {
       src: images('./head-surveillance.png'),
       type: 'heads',
       cost: 1255.5,
+      onSale: false,
     },
   ],
   arms: [
@@ -56,6 +60,7 @@ const parts = {
       src: images('./arm-articulated-claw.png'),
       type: 'arms',
       cost: 275,
+      onSale: false,
     },
     {
       id: 2,
@@ -64,6 +69,7 @@ const parts = {
       src: images('./arm-dual-claw.png'),
       type: 'arms',
       cost: 285,
+      onSale: false,
     },
     {
       id: 3,
@@ -72,6 +78,7 @@ const parts = {
       src: images('./arm-grabber.png'),
       type: 'arms',
       cost: 205.5,
+      onSale: false,
     },
     {
       id: 4,
@@ -89,6 +96,7 @@ const parts = {
       src: images('./arm-stubby-claw.png'),
       type: 'arms',
       cost: 125,
+      onSale: false,
     },
   ],
   torsos: [
@@ -99,6 +107,7 @@ const parts = {
       src: images('./torso-flexible-gauged.png'),
       type: 'torsos',
       cost: 1575,
+      onSale: false,
     },
     {
       id: 2,
@@ -107,6 +116,7 @@ const parts = {
       src: images('./torso-gauged.png'),
       type: 'torsos',
       cost: 1385,
+      onSale: false,
     },
     {
       id: 3,
@@ -126,6 +136,7 @@ const parts = {
       src: images('./base-double-wheel.png'),
       type: 'bases',
       cost: 895,
+      onSale: false,
     },
     {
       id: 2,
@@ -134,6 +145,7 @@ const parts = {
       src: images('./base-rocket.png'),
       type: 'bases',
       cost: 1520.5,
+      onSale: false,
     },
     {
       id: 3,
@@ -142,6 +154,7 @@ const parts = {
       src: images('./base-single-wheel.png'),
       type: 'bases',
       cost: 1190.5,
+      onSale: false,
     },
     {
       id: 4,
@@ -150,6 +163,7 @@ const parts = {
       src: images('./base-spring.png'),
       type: 'bases',
       cost: 1190.5,
+      onSale: false,
     },
     {
       id: 5,
@@ -158,6 +172,7 @@ const parts = {
       src: images('./base-triple-wheel.png'),
       type: 'bases',
       cost: 700.5,
+      onSale: false,
     },
   ],
 };
